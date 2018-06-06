@@ -40,10 +40,10 @@ function getRandom(x) {
     return Math.floor(Math.random() * x);
 };
 function choice6to3(content) {
-
+    console.warn(content.id)
     if (potential6to3Box.indexOf(content.id) != -1) {
-        potential6to3Box.splice(potential6to3Box.indexOf(content.id));
-    } else {
+        potential6to3Box.splice(potential6to3Box.indexOf(content.id), 1);
+    } else if (potential6to3Box.length < 3) {
         potential6to3Box = potential6to3Box.concat(content.id)
     }
     if (potential6to3Box.length != 3) {
