@@ -1,9 +1,30 @@
 let selectingBC = "#CCDDFF";
 let potential = ["攻擊BOSS怪物時傷害-30%", "攻擊BOSS怪物時傷害-20%", "攻擊BOSS怪物時傷害-40%"]
 let potential6to3Box = [];
+let buttonElement = ["使用", "取消", "確認"];
+let usingBoxTiming = ["usingBoxBefore", "usingBoxAfter"]
 let armsPotentialDataBasis = ["STR:+12%", "STR:+9%", "DEX:+12%", "DEX:+9%",
     "LUK:+12%", "LUK:+9%", "攻擊BOSS怪物時傷害+40%", "攻擊BOSS怪物時傷害+35%", "攻擊BOSS怪物時傷害+30%",
     "攻擊BOSS怪物時傷害+20%"]
+
+for (let i = 0; i < usingBoxTiming.length; i++) {
+    let DIV = document.createElement("div");
+    DIV.setAttribute('id', usingBoxTiming[i]);
+    document.getElementById("operationButton").appendChild(DIV);
+}
+
+for (let i = 0; i < buttonElement.length; i++) {
+    var BUTTON = document.createElement("button");
+    // calelem.setAttribute("class", "button" + buttonElement[i]);
+    BUTTON.innerHTML = buttonElement[i];
+    BUTTON.setAttribute('onclick', "run('" + buttonElement[i] + "')");
+    BUTTON.setAttribute('id', buttonElement[i]);
+    if (buttonElement[i] === "確認") {
+        document.getElementById("usingBoxAfter").appendChild(BUTTON);
+    } else {
+        document.getElementById("usingBoxBefore").appendChild(BUTTON);
+    }
+}
 
 for (let i = 0; i < potential.length; i++) {
     var calelem = document.createElement("div");
@@ -11,17 +32,6 @@ for (let i = 0; i < potential.length; i++) {
     //calelem.setAttribute('onclick', "run('" + buttonElement[i] + "')");
     calelem.innerHTML = potential[i];
     document.getElementById("potentialBox").appendChild(calelem);
-}
-
-let buttonElement = ["使用", "取消", "確認"];
-for (let i = 0; i < buttonElement.length; i++) {
-    var calelem = document.createElement("button");
-    // calelem.setAttribute("class", "button" + buttonElement[i]);
-    calelem.setAttribute('onclick', "run('" + buttonElement[i] + "')");
-    calelem.innerHTML = buttonElement[i];
-    calelem.setAttribute('onclick', "run('" + buttonElement[i] + "')");
-    calelem.setAttribute('id', buttonElement[i]);
-    document.getElementById("operationButton").appendChild(calelem);
 }
 
 function run(index) {
