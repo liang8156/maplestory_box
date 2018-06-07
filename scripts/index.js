@@ -21,6 +21,7 @@ for (let i = 0; i < buttonElement.length; i++) {
     BUTTON.setAttribute('id', buttonElement[i]);
     if (buttonElement[i] === "確認") {
         document.getElementById("usingBoxAfter").appendChild(BUTTON);
+        document.getElementById("usingBoxAfter").style.display = "none"
     } else {
         document.getElementById("usingBoxBefore").appendChild(BUTTON);
     }
@@ -39,6 +40,8 @@ function run(index) {
         case '使用': console.warn(index)
             let choicePotential = [];
             document.getElementById("確認").disabled = true;
+            document.getElementById("usingBoxBefore").style.display = "none"
+            document.getElementById("usingBoxAfter").style.display = "inline"
             for (let i = 0; i < 6; i++) {
                 choicePotential[i] = armsPotentialDataBasis[getRandom(armsPotentialDataBasis.length)];
             }
@@ -60,6 +63,8 @@ function run(index) {
             console.warn("ab", ab)
             break;
         case '確認': console.warn(index);
+            document.getElementById("usingBoxBefore").style.display = "inline"
+            document.getElementById("usingBoxAfter").style.display = "none"
             for (let i = 0; i < potential6to3Box.length; i++) {
                 potential[i] = document.getElementById(potential6to3Box[i]).innerHTML
             }
