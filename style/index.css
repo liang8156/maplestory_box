@@ -26,3 +26,10 @@
 #operationButton{
     text-align:center
 }
+#left_img2{
+    position:relative;
+    width: 40px;
+    height: 40px;
+    top:75px;
+    left:80px;
+}
