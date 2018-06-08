@@ -1,0 +1,28 @@
+#box{
+
+    border-width:4px;
+    border-style:solid;
+    border-radius:5%;
+    width: 200px;
+    height: 330px;
+    margin: auto
+  }
+
+#figure{
+    background:url("../image/background.png");
+    width: 200px;
+    height: 150px;
+    margin: auto
+  }
+#potentialDisplay{
+    color:white;
+    background-color:#000088
+}
+#potentialBox{
+    width: 200px;
+    height: 130px;
+    margin: auto
+  }
+#operationButton{
+    text-align:center
+}

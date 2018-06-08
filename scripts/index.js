@@ -1,4 +1,4 @@
-let selectingBC = "#CCDDFF";
+let selectingBC = "#5599FF";
 let potential = ["攻擊BOSS怪物時傷害-30%", "攻擊BOSS怪物時傷害-20%", "攻擊BOSS怪物時傷害-40%"]
 let potential6to3Box = [];
 let buttonElement = ["使用", "取消", "確認"];
@@ -59,8 +59,7 @@ function run(index) {
 
             break;
         case '取消': console.warn(index);
-            let ab = document.getElementById('choicePotentialList5').innerHTML
-            console.warn("ab", ab)
+            document.getElementById("mybar").innerHTML = '<img id="left_img" src="image/200雙弩.png" onclick="choiceProps()" />'
             break;
         case '確認': console.warn(index);
             document.getElementById("usingBoxBefore").style.display = "inline"
@@ -94,5 +93,7 @@ function choice6to3(content) {
     } else {
         document.getElementById("確認").disabled = false;
     }
-    console.warn("potential6to3Box", potential6to3Box)
+}
+function choiceProps() {
+    document.getElementById("mybar").innerHTML = ""
 }
