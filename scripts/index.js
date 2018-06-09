@@ -107,10 +107,13 @@ function choiceProps() {
 }
 
 function choiceBox() {
-    if (document.getElementById("usingBox").style.display == "none") {
-        document.getElementById("usingBox").style.display = "inline"
-    } else {
-        document.getElementById("usingBox").style.display = "none"
+    console.warn(document.getElementById("usingBoxAfter").style.display)
+    if (document.getElementById("usingBoxAfter").style.display == "none") {
+        if (document.getElementById("usingBox").style.display == "none") {
+            document.getElementById("usingBox").style.display = "inline"
+        } else {
+            document.getElementById("usingBox").style.display = "none"
+        }
     }
 }
 
