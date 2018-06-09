@@ -55,6 +55,7 @@ function run(index) {
         case '取消': console.warn(index);
             document.getElementById("potentialBox").innerHTML = ""
             document.getElementById("使用").disabled = true
+            document.getElementById("figure").innerHTML = ""
             document.getElementById("mybar").innerHTML = '<img id="left_img" src="image/200雙弩.png" onclick="choiceProps()" />'
             break;
         case '確認': console.warn(index);
@@ -93,9 +94,17 @@ function choice6to3(content) {
 function choiceProps() {
     document.getElementById("mybar").innerHTML = ""
     document.getElementById("使用").disabled = false
+    var IMG = document.createElement("IMG");
+    IMG.setAttribute("src", "image/200雙弩.png");
+    IMG.setAttribute("id", "left_img2");
+    document.getElementById("figure").appendChild(IMG);
     for (let i = 0; i < potential.length; i++) {
         var calelem = document.createElement("div");
         calelem.innerHTML = potential[i];
         document.getElementById("potentialBox").appendChild(calelem)
     }
+}
+
+function myFunction() {
+
 }
