@@ -3,9 +3,12 @@ let potential = ["攻擊BOSS怪物時傷害-30%", "攻擊BOSS怪物時傷害-20%
 let potential6to3Box = [];
 let buttonElement = ["使用", "取消", "確認"];
 let usingBoxTiming = ["usingBoxBefore", "usingBoxAfter"]
-let armsPotentialDataBasis = ["STR:+12%", "STR:+9%", "DEX:+12%", "DEX:+9%",
-    "LUK:+12%", "LUK:+9%", "攻擊BOSS怪物時傷害+40%", "攻擊BOSS怪物時傷害+35%", "攻擊BOSS怪物時傷害+30%",
-    "攻擊BOSS怪物時傷害+20%"]
+let armsPotentialDataBasis = ["STR:+13%", "STR:+10%", "DEX:+13%", "DEX:+10%",
+    "LUK:+13%", "LUK:+10%", "INT:+13%", "INT:+10%", "暴擊機率:+13%", "暴擊機率:+10%",
+    "全屬性:+10%", "全屬性:+7%", "物理攻擊力:+13%", "物理攻擊力:+10%", "魔法攻擊力:+13%",
+    "魔法攻擊力:+10%", "總傷害:+13%", "總傷害:+10%", "無視怪物防禦力:+30%", "無視怪物防禦力:+30%",
+    "無視怪物防禦力:+40%", "攻擊BOSS怪物時傷害:+40%", "攻擊BOSS怪物時傷害:+35%",
+    "攻擊BOSS怪物時傷害:+30%", "攻擊BOSS怪物時傷害:+20%"]
 
 for (let i = 0; i < usingBoxTiming.length; i++) {
     let DIV = document.createElement("div");

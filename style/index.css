@@ -1,10 +1,9 @@
 #box{
-
     border-width:4px;
     border-style:solid;
     border-radius:5%;
     width: 200px;
-    height: 330px;
+    height: 350px;
     margin: auto
   }
 
@@ -20,7 +19,7 @@
 }
 #potentialBox{
     width: 200px;
-    height: 130px;
+    height: 150px;
     margin: auto
   }
 #operationButton{
