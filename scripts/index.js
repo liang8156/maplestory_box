@@ -93,21 +93,24 @@ function choice6to3(content) {
     }
 }
 function choiceProps() {
-    document.getElementById("mybarEquipment").style.display = "none"
-    document.getElementById("使用").disabled = false
-    var IMG = document.createElement("IMG");
-    IMG.setAttribute("src", "image/200雙弩槍.png");
-    IMG.setAttribute("id", "usingEquipment");
-    document.getElementById("figure").appendChild(IMG);
-    for (let i = 0; i < potential.length; i++) {
-        var calelem = document.createElement("div");
-        calelem.innerHTML = potential[i];
-        document.getElementById("potentialBox").appendChild(calelem)
+    if (document.getElementById("usingBox").style.display != "none") {
+        document.getElementById("使用").disabled = false
+        document.getElementById("mybarEquipment").style.display = "none"
+        document.getElementById("使用").disabled = false
+        let IMG = document.createElement("IMG");
+        IMG.setAttribute("src", "image/200雙弩槍.png");
+        IMG.setAttribute("id", "usingEquipment");
+        document.getElementById("figure").appendChild(IMG);
+        for (let i = 0; i < potential.length; i++) {
+            var calelem = document.createElement("div");
+            calelem.innerHTML = potential[i];
+            document.getElementById("potentialBox").appendChild(calelem)
+        }
     }
 }
 
 function choiceBox() {
-    console.warn(document.getElementById("usingBoxAfter").style.display)
+    console.warn(document.getElementById("potentialBox").innerHTML == "")
     if (document.getElementById("usingBoxAfter").style.display == "none") {
         if (document.getElementById("usingBox").style.display == "none") {
             document.getElementById("usingBox").style.display = "inline"
