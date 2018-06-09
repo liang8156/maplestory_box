@@ -80,7 +80,6 @@ function getRandom(x) {
     return Math.floor(Math.random() * x);
 };
 function choice6to3(content) {
-    console.warn(content.id)
     if (potential6to3Box.indexOf(content.id) != -1) {
         potential6to3Box.splice(potential6to3Box.indexOf(content.id), 1);
         document.getElementById(content.id).style.background = "";
@@ -108,6 +107,12 @@ function choiceProps() {
     }
 }
 
-function myFunction() {
-
-}
+document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 73 || e.keyCode === 105) {
+        if (document.getElementById("mybar2").style.display == "inline") {
+            document.getElementById("mybar2").style.display = "none"
+        } else {
+            document.getElementById("mybar2").style.display = "inline"
+        }
+    }
+});
