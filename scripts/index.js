@@ -24,16 +24,10 @@ for (let i = 0; i < buttonElement.length; i++) {
         document.getElementById("usingBoxAfter").style.display = "none"
     } else {
         document.getElementById("usingBoxBefore").appendChild(BUTTON);
+        document.getElementById("使用").disabled = true
     }
 }
 
-for (let i = 0; i < potential.length; i++) {
-    var calelem = document.createElement("div");
-    // calelem.setAttribute("class", "button" + buttonElement[i]);
-    //calelem.setAttribute('onclick', "run('" + buttonElement[i] + "')");
-    calelem.innerHTML = potential[i];
-    document.getElementById("potentialBox").appendChild(calelem);
-}
 
 function run(index) {
     switch (index) {
@@ -59,6 +53,8 @@ function run(index) {
 
             break;
         case '取消': console.warn(index);
+            document.getElementById("potentialBox").innerHTML = ""
+            document.getElementById("使用").disabled = true
             document.getElementById("mybar").innerHTML = '<img id="left_img" src="image/200雙弩.png" onclick="choiceProps()" />'
             break;
         case '確認': console.warn(index);
@@ -96,4 +92,10 @@ function choice6to3(content) {
 }
 function choiceProps() {
     document.getElementById("mybar").innerHTML = ""
+    document.getElementById("使用").disabled = false
+    for (let i = 0; i < potential.length; i++) {
+        var calelem = document.createElement("div");
+        calelem.innerHTML = potential[i];
+        document.getElementById("potentialBox").appendChild(calelem)
+    }
 }
