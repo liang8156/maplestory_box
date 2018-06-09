@@ -106,6 +106,14 @@ function choiceProps() {
     }
 }
 
+function choiceBox() {
+    if (document.getElementById("usingBox").style.display == "none") {
+        document.getElementById("usingBox").style.display = "inline"
+    } else {
+        document.getElementById("usingBox").style.display = "none"
+    }
+}
+
 document.addEventListener('keydown', function (e) {
     if (e.keyCode === 73 || e.keyCode === 105) {
         if (document.getElementById("mybar").style.display == "inline") {
