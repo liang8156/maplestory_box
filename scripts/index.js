@@ -96,7 +96,7 @@ function choiceProps() {
     document.getElementById("mybarEquipment").style.display = "none"
     document.getElementById("使用").disabled = false
     var IMG = document.createElement("IMG");
-    IMG.setAttribute("src", "image/200雙弩.png");
+    IMG.setAttribute("src", "image/200雙弩槍.png");
     IMG.setAttribute("id", "usingEquipment");
     document.getElementById("figure").appendChild(IMG);
     for (let i = 0; i < potential.length; i++) {
