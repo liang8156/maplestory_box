@@ -53,13 +53,12 @@ function run(index) {
                 calelem.innerHTML = choicePotential[i];
                 document.getElementById("potentialBox").appendChild(calelem);
             }
-
             break;
         case '取消': console.warn(index);
             document.getElementById("potentialBox").innerHTML = ""
             document.getElementById("使用").disabled = true
             document.getElementById("figure").innerHTML = ""
-            document.getElementById("mybar").innerHTML = '<img id="left_img" src="image/200雙弩.png" onclick="choiceProps()" />'
+            document.getElementById("mybarEquipment").style.display = "inline"
             break;
         case '確認': console.warn(index);
             document.getElementById("usingBoxBefore").style.display = "inline"
@@ -94,7 +93,7 @@ function choice6to3(content) {
     }
 }
 function choiceProps() {
-    document.getElementById("mybar").innerHTML = ""
+    document.getElementById("mybarEquipment").style.display = "none"
     document.getElementById("使用").disabled = false
     var IMG = document.createElement("IMG");
     IMG.setAttribute("src", "image/200雙弩.png");
@@ -109,10 +108,10 @@ function choiceProps() {
 
 document.addEventListener('keydown', function (e) {
     if (e.keyCode === 73 || e.keyCode === 105) {
-        if (document.getElementById("mybar2").style.display == "inline") {
-            document.getElementById("mybar2").style.display = "none"
+        if (document.getElementById("mybar").style.display == "inline") {
+            document.getElementById("mybar").style.display = "none"
         } else {
-            document.getElementById("mybar2").style.display = "inline"
+            document.getElementById("mybar").style.display = "inline"
         }
     }
 });
