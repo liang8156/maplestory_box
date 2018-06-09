@@ -1,3 +1,14 @@
+#mybar{
+    float: left;
+    width: 5%;
+}
+#equipment_img{
+    position: absolute;;
+    width: 30px;
+    height: 30px;
+    top:60px;
+    left:20px;
+}
 #box{
     border-width:4px;
     border-style:solid;
@@ -25,7 +36,7 @@
 #operationButton{
     text-align:center
 }
-#left_img2{
+#usingEquipment{
     position:relative;
     width: 40px;
     height: 40px;
