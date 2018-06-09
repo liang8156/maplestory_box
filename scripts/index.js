@@ -110,11 +110,13 @@ function choiceProps() {
 }
 
 function choiceBox() {
-    console.warn(document.getElementById("potentialBox").innerHTML == "")
     if (document.getElementById("usingBoxAfter").style.display == "none") {
         if (document.getElementById("usingBox").style.display == "none") {
             document.getElementById("usingBox").style.display = "inline"
-        } else {
+        } else if (document.getElementById("potentialBox").innerHTML != "") {
+            document.getElementById("usingBox").style.display = "inline" //如果武器尚在方塊內 不給關閉視窗
+        }
+        else {
             document.getElementById("usingBox").style.display = "none"
         }
     }
